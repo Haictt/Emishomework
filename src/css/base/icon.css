@@ -1,0 +1,48 @@
+.el-icon-arrow-up::before {
+  content: "";
+  position: absolute;
+  background: url("../../assets/imgs/sprites.06b14dc5.svg") no-repeat -148px -53px;
+  width: 16px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.icon-sprite {
+  background: url("../../assets/imgs/sprites.06b14dc5.svg") no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.icon-delete::before {
+  content: "";
+  position: absolute;
+  background: url("../../assets/imgs/sprites.06b14dc5.svg") no-repeat -243px -195px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  filter: invert(32%) sepia(26%) saturate(344%) hue-rotate(171deg)
+    brightness(120%) contrast(91%);
+}
+.icon-delete-header::before {
+  content: "";
+  position: absolute;
+  background: url("../../assets/imgs/sprites.06b14dc5.svg") no-repeat -245px -30px;
+  width: 13px;
+  height: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.icon-close::before {
+  content: "";
+  position: absolute;
+  background: url("../../assets/imgs/sprites.06b14dc5.svg") no-repeat -4px -124px;
+  width: 8px;
+  height: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

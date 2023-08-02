@@ -1,0 +1,183 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+}
+
+@font-face {
+  font-family: MISA;
+  src: url(../assets/fonts/GoogleSans/GoogleSans-Regular.woff2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: MISA;
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  width: 4px;
+  height: 4px;
+  background-color: #b6b9ce;
+  border-radius: 2px;
+  cursor: pointer;
+}
+body {
+  height: 100%;
+  color: #000;
+  margin: 0;
+
+  background: #f7f7f7;
+  position: relative;
+}
+.flex1 {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mr-3 {
+  margin-right: 0.75rem !important;
+}
+.mt-3 {
+  margin-top: 0.75rem;
+}
+.el-select {
+  display: inline-block;
+  position: relative;
+}
+.el-input {
+  position: relative;
+  font-size: 14px;
+  display: inline-block;
+  width: 100%;
+}
+.el-scrollbar {
+  overflow: hidden;
+  position: relative;
+}
+.el-scrollbar-wrap {
+  overflow: scroll;
+  height: 100%;
+}
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.mr-12 {
+  margin-right: 3rem;
+}
+.grid {
+  display: grid;
+}
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.pointer {
+  cursor: pointer;
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.object-cover {
+  object-fit: cover;
+}
+.rounded-full {
+  border-radius: 9999px;
+}
+.text-sm {
+  font-size: 14px;
+  line-height: 20px;
+}
+.text-accent-200 {
+  color: rgba(138, 107, 246, 1);
+}
+.required::after {
+  content: " *";
+  color: red;
+}
+.questionTypeNameStyle {
+  background-color: #f8e373 !important;
+  border: none !important;
+  font-weight: 700 !important;
+}

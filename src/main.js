@@ -1,0 +1,43 @@
+import "./assets/main.css";
+
+import { createApp, markRaw } from "vue";
+import App from "./App.vue";
+import router from "./router/router.js";
+import "./assets/main.css";
+import MISACombobox from "./components/MISACombobox.vue";
+import MISAButton from "./components/MISAButton.vue";
+import MISASearch from "./components/MISASearch.vue";
+import MISAInput from "./components/MISAInput.vue";
+import MISATextAreaSuggest from "./components/MISATextAreaSuggest.vue";
+import MISAComboboxMultiple from "./components/MISAComboboxMultiple.vue";
+import MISALoading from "./components/MISALoading.vue";
+import MISADialog from "./components/MISADialog.vue";
+import CKEditor from "@ckeditor/ckeditor5-vue";
+import clickoutside from "./js/base/directives.js";
+import mixins from "./js/mixins/mixins.js";
+import MISAEnum from "./js/base/MISAEnum.js";
+import MISAResource from "./js/base/MISAResource.js";
+import { createPinia } from "pinia";
+const pinia = createPinia();
+pinia.use(({ store }) => {
+  store.router = markRaw(router);
+});
+const app = createApp(App);
+const globalConfig = app.config.globalProperties;
+globalConfig.$enum = MISAEnum;
+globalConfig.$resource = MISAResource;
+app.component("Combobox", MISACombobox);
+app.component("Button", MISAButton);
+app.component("Search", MISASearch);
+app.component("Input", MISAInput);
+app.component("TextAreaSuggest", MISATextAreaSuggest);
+app.component("ComboboxMultiple", MISAComboboxMultiple);
+app.component("Loading", MISALoading);
+app.component("Dialog", MISADialog);
+app.directive("outside", clickoutside);
+app.mixin(mixins);
+app.use(router);
+app.use(CKEditor);
+app.use(pinia);
+
+app.mount("#app");
